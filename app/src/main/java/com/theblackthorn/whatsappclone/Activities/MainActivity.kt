@@ -1,5 +1,4 @@
-package com.theblackthorn.whatsappclone
-
+package com.theblackthorn.whatsappclone.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -7,9 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.theblackthorn.whatsappclone.Activities.CreateAccountActivity
-import com.theblackthorn.whatsappclone.Activities.DashboardActivity
-import com.theblackthorn.whatsappclone.Activities.LoginActivity
+import com.theblackthorn.whatsappclone.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
         mAuthListener = FirebaseAuth.AuthStateListener {
-                firebaseAuth: FirebaseAuth ->
+            firebaseAuth: FirebaseAuth ->
 
             user = firebaseAuth.currentUser
 
@@ -59,4 +56,6 @@ class MainActivity : AppCompatActivity() {
             mAuth!!.removeAuthStateListener(mAuthListener!!)
         }
     }
+
 }
+
