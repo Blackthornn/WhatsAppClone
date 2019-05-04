@@ -2,13 +2,14 @@ package com.theblackthorn.whatsappclone.Activities
 
 import android.content.Intent
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.theblackthorn.whatsappclone.Adapters.SectionPagerAdapter
-import com.theblackthorn.whatsappclone.MainActivity
 import com.theblackthorn.whatsappclone.R
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
@@ -24,6 +25,7 @@ class DashboardActivity : AppCompatActivity() {
 
             sectionAdapter = SectionPagerAdapter(supportFragmentManager)
             dashViewPagerId.adapter = sectionAdapter
+
             mainTabs.setupWithViewPager(dashViewPagerId)
             mainTabs.setTabTextColors(Color.WHITE, Color.MAGENTA)
 
